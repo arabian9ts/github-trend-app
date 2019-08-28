@@ -37,6 +37,7 @@
 		FF4BE24B23167BBE00FB14B8 /* GitHubTrendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */; };
 		FF4BE24E23167E2100FB14B8 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24D23167E2000FB14B8 /* RxMoya.framework */; };
 		FF4BE24F23167E2100FB14B8 /* RxMoya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24D23167E2000FB14B8 /* RxMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF4BE2512316A86500FB14B8 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE2502316A86500FB14B8 /* CounterLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +86,7 @@
 		FF4BE24723167B4F00FB14B8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrendAPI.swift; sourceTree = "<group>"; };
 		FF4BE24D23167E2000FB14B8 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		FF4BE2502316A86500FB14B8 /* CounterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		FF4BE21F23166A7300FB14B8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF4BE2502316A86500FB14B8 /* CounterLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			files = (
 				FF4BE2352316788500FB14B8 /* GitHubTrend.swift in Sources */,
 				FF4BE22B23166E4500FB14B8 /* assets-images.swift in Sources */,
+				FF4BE2512316A86500FB14B8 /* CounterLabel.swift in Sources */,
 				FF4BE22C23166E4500FB14B8 /* storyboards.swift in Sources */,
 				FF4BE24B23167BBE00FB14B8 /* GitHubTrendAPI.swift in Sources */,
 				FF4BE201231664F700FB14B8 /* ViewController.swift in Sources */,

@@ -16,13 +16,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GitHubTrendAPI.shared.request(GitHubTrendRequest.GetTrend(lang: "Swift"))
-        .subscribe(onSuccess: { (trends) in
-            dump(trends)
-        }, onError: { (err) in
-            print("error: \(err)")
-        })
-        .disposed(by: disposeBag)
+        let label = CounterLabel()
+        label.frame = view.frame
+        label.center = view.center
+        view.addSubview(label)
+        label.startCount(from: 0, to: 100)
+        
+//        GitHubTrendAPI.shared.request(GitHubTrendRequest.GetTrend(lang: "Swift"))
+//        .subscribe(onSuccess: { (trends) in
+//            dump(trends)
+//        }, onError: { (err) in
+//            print("error: \(err)")
+//        })
+//        .disposed(by: disposeBag)
     }
 
 
