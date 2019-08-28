@@ -1,0 +1,10 @@
+xcassets:
+  paths:
+   - OctCats/Assets.xcassets/
+  templateName: swift4
+  output: OctCats/Generated/assets-images.swift
+storyboards:
+  paths:
+   - OctCats/Storyboard/
+  templateName: swift4
+  output: OctCats/Generated/storyboards.swift
