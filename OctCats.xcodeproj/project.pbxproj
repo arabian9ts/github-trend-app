@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7C5FF7F314CEBF69F276B62 /* GitHubTrendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F89719C5ABEEC7381170 /* GitHubTrendRequest.swift */; };
 		FF4BE1FF231664F700FB14B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */; };
 		FF4BE201231664F700FB14B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE200231664F700FB14B8 /* ViewController.swift */; };
 		FF4BE204231664F700FB14B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE202231664F700FB14B8 /* Main.storyboard */; };
@@ -21,6 +22,21 @@
 		FF4BE21D2316671900FB14B8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE21A2316671900FB14B8 /* RxCocoa.framework */; };
 		FF4BE21E2316671900FB14B8 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE21A2316671900FB14B8 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF4BE22623166D4900FB14B8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE22523166D4900FB14B8 /* UIColor+.swift */; };
+		FF4BE22B23166E4500FB14B8 /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE22923166E4500FB14B8 /* assets-images.swift */; };
+		FF4BE22C23166E4500FB14B8 /* storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE22A23166E4500FB14B8 /* storyboards.swift */; };
+		FF4BE2352316788500FB14B8 /* GitHubTrend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE2342316788500FB14B8 /* GitHubTrend.swift */; };
+		FF4BE23D23167A0900FB14B8 /* Stubs in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE23C23167A0900FB14B8 /* Stubs */; };
+		FF4BE23F23167AA300FB14B8 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE23E23167AA300FB14B8 /* Moya.framework */; };
+		FF4BE24023167AA300FB14B8 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE23E23167AA300FB14B8 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF4BE24223167ACE00FB14B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24123167ACE00FB14B8 /* Alamofire.framework */; };
+		FF4BE24323167ACE00FB14B8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24123167ACE00FB14B8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF4BE24523167B1500FB14B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24423167B1500FB14B8 /* Alamofire.framework */; };
+		FF4BE24623167B1500FB14B8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24423167B1500FB14B8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF4BE24823167B4F00FB14B8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24723167B4F00FB14B8 /* Result.framework */; };
+		FF4BE24923167B4F00FB14B8 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24723167B4F00FB14B8 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF4BE24B23167BBE00FB14B8 /* GitHubTrendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */; };
+		FF4BE24E23167E2100FB14B8 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24D23167E2000FB14B8 /* RxMoya.framework */; };
+		FF4BE24F23167E2100FB14B8 /* RxMoya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24D23167E2000FB14B8 /* RxMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,7 +47,12 @@
 			dstSubfolderSpec = 10;
 			files = (
 				FF4BE21E2316671900FB14B8 /* RxCocoa.framework in Embed Frameworks */,
+				FF4BE24323167ACE00FB14B8 /* Alamofire.framework in Embed Frameworks */,
+				FF4BE24023167AA300FB14B8 /* Moya.framework in Embed Frameworks */,
+				FF4BE24923167B4F00FB14B8 /* Result.framework in Embed Frameworks */,
 				FF4BE218231666F700FB14B8 /* RealmSwift.framework in Embed Frameworks */,
+				FF4BE24F23167E2100FB14B8 /* RxMoya.framework in Embed Frameworks */,
+				FF4BE24623167B1500FB14B8 /* Alamofire.framework in Embed Frameworks */,
 				FF4BE214231666E200FB14B8 /* Realm.framework in Embed Frameworks */,
 				FF4BE21C2316671900FB14B8 /* RxSwift.framework in Embed Frameworks */,
 			);
@@ -41,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C7C5F89719C5ABEEC7381170 /* GitHubTrendRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTrendRequest.swift; sourceTree = "<group>"; };
 		FF4BE1FB231664F700FB14B8 /* OctCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF4BE200231664F700FB14B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +75,16 @@
 		FF4BE2192316671800FB14B8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		FF4BE21A2316671900FB14B8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FF4BE22523166D4900FB14B8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		FF4BE22923166E4500FB14B8 /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
+		FF4BE22A23166E4500FB14B8 /* storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyboards.swift; sourceTree = "<group>"; };
+		FF4BE2342316788500FB14B8 /* GitHubTrend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrend.swift; sourceTree = "<group>"; };
+		FF4BE23C23167A0900FB14B8 /* Stubs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stubs; sourceTree = "<group>"; };
+		FF4BE23E23167AA300FB14B8 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		FF4BE24123167ACE00FB14B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		FF4BE24423167B1500FB14B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		FF4BE24723167B4F00FB14B8 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrendAPI.swift; sourceTree = "<group>"; };
+		FF4BE24D23167E2000FB14B8 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +93,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4BE21D2316671900FB14B8 /* RxCocoa.framework in Frameworks */,
+				FF4BE24223167ACE00FB14B8 /* Alamofire.framework in Frameworks */,
+				FF4BE23F23167AA300FB14B8 /* Moya.framework in Frameworks */,
+				FF4BE24823167B4F00FB14B8 /* Result.framework in Frameworks */,
 				FF4BE217231666F700FB14B8 /* RealmSwift.framework in Frameworks */,
+				FF4BE24E23167E2100FB14B8 /* RxMoya.framework in Frameworks */,
+				FF4BE24523167B1500FB14B8 /* Alamofire.framework in Frameworks */,
 				FF4BE213231666E200FB14B8 /* Realm.framework in Frameworks */,
 				FF4BE21B2316671900FB14B8 /* RxSwift.framework in Frameworks */,
 			);
@@ -70,9 +107,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7C5F272F902B62D31E5DA74 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5F89719C5ABEEC7381170 /* GitHubTrendRequest.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		C7C5F30BCD4A1A83B409EFB9 /* Infrastractures */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5F272F902B62D31E5DA74 /* Repositories */,
+				FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */,
+			);
+			path = Infrastractures;
+			sourceTree = "<group>";
+		};
 		FF4BE1F2231664F700FB14B8 = {
 			isa = PBXGroup;
 			children = (
+				FF4BE24D23167E2000FB14B8 /* RxMoya.framework */,
+				FF4BE24723167B4F00FB14B8 /* Result.framework */,
+				FF4BE24123167ACE00FB14B8 /* Alamofire.framework */,
+				FF4BE24423167B1500FB14B8 /* Alamofire.framework */,
+				FF4BE23E23167AA300FB14B8 /* Moya.framework */,
 				FF4BE21A2316671900FB14B8 /* RxCocoa.framework */,
 				FF4BE2192316671800FB14B8 /* RxSwift.framework */,
 				FF4BE216231666F700FB14B8 /* RealmSwift.framework */,
@@ -93,14 +152,17 @@
 		FF4BE1FD231664F700FB14B8 /* OctCats */ = {
 			isa = PBXGroup;
 			children = (
+				FF4BE23C23167A0900FB14B8 /* Stubs */,
+				FF4BE2332316787900FB14B8 /* Models */,
+				FF4BE22823166E2D00FB14B8 /* Generated */,
+				FF4BE22723166DFC00FB14B8 /* Storyboard */,
 				FF4BE22023166A8700FB14B8 /* Extensions */,
 				FF4BE21F23166A7300FB14B8 /* Components */,
 				FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */,
 				FF4BE200231664F700FB14B8 /* ViewController.swift */,
-				FF4BE202231664F700FB14B8 /* Main.storyboard */,
 				FF4BE205231664FE00FB14B8 /* Assets.xcassets */,
-				FF4BE207231664FE00FB14B8 /* LaunchScreen.storyboard */,
 				FF4BE20A231664FE00FB14B8 /* Info.plist */,
+				C7C5F30BCD4A1A83B409EFB9 /* Infrastractures */,
 			);
 			path = OctCats;
 			sourceTree = "<group>";
@@ -118,6 +180,32 @@
 				FF4BE22523166D4900FB14B8 /* UIColor+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF4BE22723166DFC00FB14B8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FF4BE202231664F700FB14B8 /* Main.storyboard */,
+				FF4BE207231664FE00FB14B8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FF4BE22823166E2D00FB14B8 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				FF4BE22923166E4500FB14B8 /* assets-images.swift */,
+				FF4BE22A23166E4500FB14B8 /* storyboards.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		FF4BE2332316787900FB14B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF4BE2342316788500FB14B8 /* GitHubTrend.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +271,7 @@
 			files = (
 				FF4BE209231664FE00FB14B8 /* LaunchScreen.storyboard in Resources */,
 				FF4BE206231664FE00FB14B8 /* Assets.xcassets in Resources */,
+				FF4BE23D23167A0900FB14B8 /* Stubs in Resources */,
 				FF4BE204231664F700FB14B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +291,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/HEXColor.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
@@ -238,9 +328,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4BE2352316788500FB14B8 /* GitHubTrend.swift in Sources */,
+				FF4BE22B23166E4500FB14B8 /* assets-images.swift in Sources */,
+				FF4BE22C23166E4500FB14B8 /* storyboards.swift in Sources */,
+				FF4BE24B23167BBE00FB14B8 /* GitHubTrendAPI.swift in Sources */,
 				FF4BE201231664F700FB14B8 /* ViewController.swift in Sources */,
 				FF4BE1FF231664F700FB14B8 /* AppDelegate.swift in Sources */,
 				FF4BE22623166D4900FB14B8 /* UIColor+.swift in Sources */,
+				C7C5FF7F314CEBF69F276B62 /* GitHubTrendRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
