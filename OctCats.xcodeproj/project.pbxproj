@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C7C5FF7F314CEBF69F276B62 /* GitHubTrendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F89719C5ABEEC7381170 /* GitHubTrendRequest.swift */; };
+		FF3570E223190A8C005B1691 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3570E023190A8C005B1691 /* TrendTableViewCell.swift */; };
+		FF3570E323190A8C005B1691 /* TrendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3570E123190A8C005B1691 /* TrendTableViewCell.xib */; };
 		FF4BE1FF231664F700FB14B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */; };
 		FF4BE201231664F700FB14B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE200231664F700FB14B8 /* ViewController.swift */; };
 		FF4BE204231664F700FB14B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE202231664F700FB14B8 /* Main.storyboard */; };
@@ -24,7 +26,7 @@
 		FF4BE22623166D4900FB14B8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE22523166D4900FB14B8 /* UIColor+.swift */; };
 		FF4BE22B23166E4500FB14B8 /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE22923166E4500FB14B8 /* assets-images.swift */; };
 		FF4BE22C23166E4500FB14B8 /* storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE22A23166E4500FB14B8 /* storyboards.swift */; };
-		FF4BE2352316788500FB14B8 /* GitHubTrend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE2342316788500FB14B8 /* GitHubTrend.swift */; };
+		FF4BE2352316788500FB14B8 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE2342316788500FB14B8 /* GitHubRepository.swift */; };
 		FF4BE23D23167A0900FB14B8 /* Stubs in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE23C23167A0900FB14B8 /* Stubs */; };
 		FF4BE23F23167AA300FB14B8 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE23E23167AA300FB14B8 /* Moya.framework */; };
 		FF4BE24023167AA300FB14B8 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE23E23167AA300FB14B8 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -64,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		C7C5F89719C5ABEEC7381170 /* GitHubTrendRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTrendRequest.swift; sourceTree = "<group>"; };
+		FF3570E023190A8C005B1691 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
+		FF3570E123190A8C005B1691 /* TrendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendTableViewCell.xib; sourceTree = "<group>"; };
 		FF4BE1FB231664F700FB14B8 /* OctCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF4BE200231664F700FB14B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +82,7 @@
 		FF4BE22523166D4900FB14B8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		FF4BE22923166E4500FB14B8 /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
 		FF4BE22A23166E4500FB14B8 /* storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyboards.swift; sourceTree = "<group>"; };
-		FF4BE2342316788500FB14B8 /* GitHubTrend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrend.swift; sourceTree = "<group>"; };
+		FF4BE2342316788500FB14B8 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
 		FF4BE23C23167A0900FB14B8 /* Stubs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stubs; sourceTree = "<group>"; };
 		FF4BE23E23167AA300FB14B8 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		FF4BE24123167ACE00FB14B8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 				FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */,
 			);
 			path = Infrastractures;
+			sourceTree = "<group>";
+		};
+		FF3570DF23190A45005B1691 /* TrendTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FF3570E023190A8C005B1691 /* TrendTableViewCell.swift */,
+				FF3570E123190A8C005B1691 /* TrendTableViewCell.xib */,
+			);
+			path = TrendTableViewCell;
 			sourceTree = "<group>";
 		};
 		FF4BE1F2231664F700FB14B8 = {
@@ -172,6 +185,7 @@
 		FF4BE21F23166A7300FB14B8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF3570DF23190A45005B1691 /* TrendTableViewCell */,
 				FF4BE2502316A86500FB14B8 /* CounterLabel.swift */,
 			);
 			path = Components;
@@ -206,7 +220,7 @@
 		FF4BE2332316787900FB14B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FF4BE2342316788500FB14B8 /* GitHubTrend.swift */,
+				FF4BE2342316788500FB14B8 /* GitHubRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4BE209231664FE00FB14B8 /* LaunchScreen.storyboard in Resources */,
+				FF3570E323190A8C005B1691 /* TrendTableViewCell.xib in Resources */,
 				FF4BE206231664FE00FB14B8 /* Assets.xcassets in Resources */,
 				FF4BE23D23167A0900FB14B8 /* Stubs in Resources */,
 				FF4BE204231664F700FB14B8 /* Main.storyboard in Resources */,
@@ -331,7 +346,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF4BE2352316788500FB14B8 /* GitHubTrend.swift in Sources */,
+				FF4BE2352316788500FB14B8 /* GitHubRepository.swift in Sources */,
+				FF3570E223190A8C005B1691 /* TrendTableViewCell.swift in Sources */,
 				FF4BE22B23166E4500FB14B8 /* assets-images.swift in Sources */,
 				FF4BE2512316A86500FB14B8 /* CounterLabel.swift in Sources */,
 				FF4BE22C23166E4500FB14B8 /* storyboards.swift in Sources */,

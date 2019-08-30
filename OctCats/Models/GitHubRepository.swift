@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GitHubTrend: Codable {
+class GitHubRepository: Codable {
     var author:             String? = ""
     var name:               String? = ""
     var avatar:             String? = ""

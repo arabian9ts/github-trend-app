@@ -10,7 +10,7 @@ protocol GitHubTrendAPITargetType: TargetType {
 }
 
 extension GitHubTrendAPITargetType {
-    typealias Response = [GitHubTrend]
+    typealias Response = [GitHubRepository]
     var baseURL: URL { return URL(string: "https://github-trending-api.now.sh")! }
     var headers: [String : String]? { return nil }
     var task: Task { return .requestPlain }
