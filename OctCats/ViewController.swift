@@ -10,8 +10,10 @@ import Moya
 import RxSwift
 import RxCocoa
 import UIKit
+import SnapKit
+import SkeletonView
 
-let REUSE_IDEF = "TrendTableViewCell"
+fileprivate let reuseIdef = "TrendTableViewCell"
 
 class ViewController: UIViewController {
     
@@ -19,45 +21,37 @@ class ViewController: UIViewController {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
         tableView.clipsToBounds = true
-        tableView.register(TrendTableViewCell.self, forCellReuseIdentifier: REUSE_IDEF)
+        tableView.register(TrendTableViewCell.self, forCellReuseIdentifier: reuseIdef)
         return tableView
     }()
     
     let dataSource = TrendDataSource()
     let disposeBag = DisposeBag()
+    let store = TrendStore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTrendView()
-        
-//        let label = CounterLabel()
-//        label.frame = view.frame
-//        label.center = view.center
-//        view.addSubview(label)
-//        label.startCount(from: 0, to: 100)
-        
-//        GitHubTrendAPI.shared.request(GitHubTrendRequest.GetTrend(lang: "Swift"))
-//        .subscribe(onSuccess: { (trends) in
-//            dump(trends)
-//        }, onError: { (err) in
-//            print("error: \(err)")
-//        })
-//        .disposed(by: disposeBag)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
     }
     
     private func setupTrendView() {
-        trendTableView.dataSource = dataSource
-        
+        trendTableView.delegate = dataSource
         view.addSubview(trendTableView)
-        
         trendTableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            trendTableView.topAnchor.constraint(equalTo: view.topAnchor),
-            trendTableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            trendTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            trendTableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-        ])
+        trendTableView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(view.snp.top)
+            make.left.equalTo(view)
+            make.bottom.equalTo(view.snp.bottom)
+            make.right.equalTo(view)
+        }
+        
+        store.trendRepositories.bind(to: trendTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
     }
 }
 
@@ -73,14 +67,26 @@ class TrendDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxT
             .on(observedEvent)
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemModels.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: REUSE_IDEF, for: indexPath) as! TrendTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdef, for: indexPath) as! TrendTableViewCell
+//        cell.isSkeletonable = true
+//        cell.showGradientSkeleton()
+        cell.backgroundColor = .black
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
 }
-

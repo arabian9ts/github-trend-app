@@ -1,6 +1,8 @@
 github "Alamofire/Alamofire" "4.8.2"
+github "Juanpe/SkeletonView" "18cd0f9aba54c54087cde8879c4e7063894403ba"
 github "Moya/Moya" "13.0.1"
 github "ReactiveCocoa/ReactiveSwift" "5.0.1"
 github "ReactiveX/RxSwift" "4.5.0"
+github "SnapKit/SnapKit" "5.0.1"
 github "antitypical/Result" "4.1.0"
 github "realm/realm-cocoa" "v3.17.3"
