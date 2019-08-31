@@ -25,9 +25,17 @@ class ViewController: UIViewController {
         return tableView
     }()
     
-    let dataSource = TrendDataSource()
-    let disposeBag = DisposeBag()
-    let store = TrendStore()
+    private let dataSource = {
+        return TrendDataSource()
+    }()
+    
+    private let disposeBag = {
+        return DisposeBag()
+    }()
+    
+    private let store: TrendStore = {
+        return TrendStore()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
