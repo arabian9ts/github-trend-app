@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
         tableView.clipsToBounds = true
-        tableView.register(TrendTableViewCell.self, forCellReuseIdentifier: reuseIdef)
+        tableView.register(cellType: TrendTableViewCell.self)
         return tableView
     }()
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
+//        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
     }
     
     private func setupTrendView() {
@@ -84,15 +84,15 @@ class TrendDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxT
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdef, for: indexPath) as! TrendTableViewCell
+        let cell = tableView.dequeueReusableCell(with: TrendTableViewCell.self, for: indexPath)
 //        cell.isSkeletonable = true
 //        cell.showGradientSkeleton()
-        cell.backgroundColor = .black
+        cell.setupCell(model: itemModels[indexPath.row])
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+    func tablew(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

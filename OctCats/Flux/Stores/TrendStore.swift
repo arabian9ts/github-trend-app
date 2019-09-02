@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class TrendStore: Store {
-    var trendRepositories = BehaviorRelay<[GitHubRepository]>(value: [GitHubRepository(), GitHubRepository()])
+    var trendRepositories = BehaviorRelay<[GitHubRepository]>(value: [GitHubRepository(), GitHubRepository(), GitHubRepository(), GitHubRepository(), GitHubRepository()])
     private let disposeBag = DisposeBag()
     
     required init(with dispatcher: Dispatcher = .shared) {
@@ -25,8 +25,6 @@ class TrendStore: Store {
                         print("error: \(err)")
                     })
                     .disposed(by: self.disposeBag)
-            case .Other:
-                print("other")
             }})
             .disposed(by: disposeBag)
     }

@@ -10,5 +10,4 @@ import Foundation
 
 enum TrendAction: Action {
     case getTrends(lang: String)
-    case Other
 }

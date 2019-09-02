@@ -49,6 +49,8 @@
 		FF4BE24E23167E2100FB14B8 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24D23167E2000FB14B8 /* RxMoya.framework */; };
 		FF4BE24F23167E2100FB14B8 /* RxMoya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24D23167E2000FB14B8 /* RxMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF4BE2512316A86500FB14B8 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE2502316A86500FB14B8 /* CounterLabel.swift */; };
+		FF55E868231B8A44002BF862 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E867231B8A44002BF862 /* UITableView+.swift */; };
+		FF55E86A231B8ABC002BF862 /* ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E869231B8ABC002BF862 /* ClassName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -109,6 +111,8 @@
 		FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubTrendAPI.swift; sourceTree = "<group>"; };
 		FF4BE24D23167E2000FB14B8 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		FF4BE2502316A86500FB14B8 /* CounterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
+		FF55E867231B8A44002BF862 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		FF55E869231B8ABC002BF862 /* ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				FF4BE22523166D4900FB14B8 /* UIColor+.swift */,
+				FF55E867231B8A44002BF862 /* UITableView+.swift */,
+				FF55E869231B8ABC002BF862 /* ClassName.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -406,6 +412,8 @@
 				FF4BE2512316A86500FB14B8 /* CounterLabel.swift in Sources */,
 				FF4BE22C23166E4500FB14B8 /* storyboards.swift in Sources */,
 				FF4BE24B23167BBE00FB14B8 /* GitHubTrendAPI.swift in Sources */,
+				FF55E86A231B8ABC002BF862 /* ClassName.swift in Sources */,
+				FF55E868231B8A44002BF862 /* UITableView+.swift in Sources */,
 				FF4BE201231664F700FB14B8 /* ViewController.swift in Sources */,
 				FF3570EE2319DB6D005B1691 /* Dispatcher.swift in Sources */,
 				FF4BE1FF231664F700FB14B8 /* AppDelegate.swift in Sources */,
