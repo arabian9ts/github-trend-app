@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBackground()
         setupTrendView()
     }
     
@@ -48,8 +49,19 @@ class ViewController: UIViewController {
 //        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
     }
     
+    private func setupBackground() {
+        let gradientLayer = CAGradientLayer()
+        let colors = [#colorLiteral(red: 0.2132213717, green: 0.3168508858, blue: 0.640188769, alpha: 1).cgColor, #colorLiteral(red: 0.2537953442, green: 0.1709154244, blue: 0.5889911168, alpha: 1).cgColor, #colorLiteral(red: 0.5882814194, green: 0.2829623238, blue: 0.6070748731, alpha: 1).cgColor]
+        gradientLayer.frame = view.bounds
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        gradientLayer.colors = colors
+        view.layer.addSublayer(gradientLayer)
+    }
+    
     private func setupTrendView() {
         trendTableView.delegate = dataSource
+        trendTableView.backgroundColor = .clear
         view.addSubview(trendTableView)
         trendTableView.translatesAutoresizingMaskIntoConstraints = false
         trendTableView.snp.makeConstraints { (make) -> Void in
@@ -91,7 +103,7 @@ class TrendDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxT
         return cell
     }
     
-    func tablew(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
     

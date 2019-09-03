@@ -33,7 +33,6 @@ class TrendTableViewCell: UITableViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupLayout()
     }
     
     override var frame: CGRect {
@@ -49,17 +48,21 @@ class TrendTableViewCell: UITableViewCell {
     }
     
     private func setupLayout() {
-        sizeToFit()
+        backgroundColor = .white
         selectionStyle = .none
-        layer.cornerRadius = 15.0
-        layer.shadowOpacity = 0.15
-        layer.shadowRadius = 10.0
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 5)
-        UserDefaults.standard.set(false, forKey: "UIConstarintBasedLayoutLogUnsatisfiable")
+        layer.masksToBounds = true
+        layer.cornerRadius = 10.0
+
+//        containerView.layer.masksToBounds = false
+//        containerView.backgroundColor = .clear
+//        containerView.layer.shadowOpacity = 0.15
+//        containerView.layer.shadowRadius = 10.0
+//        containerView.layer.shadowColor = UIColor.black.cgColor
+//        containerView.layer.shadowOffset = CGSize(width: 0, height: 10)
     }
     
     func setupCell(model: GitHubRepository) {
+        setupLayout()
         langLabel.text = "Swift"
         descLabel.text = "Feed reader for macOS "
         starLabel.startCount(from: 0, to: 100)
