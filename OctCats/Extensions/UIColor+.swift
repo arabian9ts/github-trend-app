@@ -29,4 +29,18 @@ extension UIColor {
             blue: rgb & 0xFF
         )
     }
+    
+    convenience init(hex: String, alpha: CGFloat) {
+        let _hex = hex.replacingOccurrences(of: "#", with: "") as String
+        let scanner = Scanner(string: _hex)
+        var color: UInt32 = 0
+        if scanner.scanHexInt32(&color) {
+            let r = CGFloat((color & 0xFF0000) >> 16) / 255.0
+            let g = CGFloat((color & 0x00FF00) >> 8) / 255.0
+            let b = CGFloat(color & 0x0000FF) / 255.0
+            self.init(red: r, green: g, blue: b, alpha: alpha)
+        } else {
+            self.init(red: 0, green: 0, blue: 0, alpha: 1)
+        }
+    }
 }

@@ -17,6 +17,7 @@ class TrendTableViewCell: UITableViewCell {
     @IBOutlet weak var starLabel: CounterLabel!
     @IBOutlet weak var forkLabel: CounterLabel!
     @IBOutlet weak var todaysStarLabel: CounterLabel!
+    @IBOutlet weak var langColorAsideView: UIView!
     
     
     override func awakeFromNib() {
@@ -63,9 +64,15 @@ class TrendTableViewCell: UITableViewCell {
     
     func setupCell(model: GitHubRepository) {
         setupLayout()
-        langLabel.text = "Swift"
-        descLabel.text = "Feed reader for macOS "
-        starLabel.startCount(from: 0, to: 100)
-        forkLabel.startCount(from: 0, to: 50)
+        repositoryNameLabel.text = "\(model.author!) / \(model.name!)"
+        langColorView.backgroundColor = UIColor(hex: model.languageColor ?? "", alpha: 1)
+        langColorAsideView.backgroundColor = UIColor(hex: model.languageColor ?? "", alpha: 1)
+        langLabel.text = model.language
+        descLabel.text = model.description
+        
+        let stars = model.stars ?? 0
+        let forks = model.forks ?? 0
+        starLabel.startCount(from: 0, to: Double(stars))
+        forkLabel.startCount(from: 0, to: Double(forks))
     }
 }

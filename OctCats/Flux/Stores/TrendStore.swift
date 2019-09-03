@@ -25,6 +25,9 @@ class TrendStore: Store {
                         print("error: \(err)")
                     })
                     .disposed(by: self.disposeBag)
+            case let .getTrendsStub:
+                let stub = GitHubTrendAPI.shared.stub()
+                self.trendRepositories.accept(stub)
             }})
             .disposed(by: disposeBag)
     }

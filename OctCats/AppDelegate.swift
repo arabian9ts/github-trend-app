@@ -15,21 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        
-        let trendScene = StoryboardScene.Main.initialScene
-        let trendVC = trendScene.instantiate() as ViewController
-        trendVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
-        
-        let favoriteScene = StoryboardScene.Main.initialScene
-        let favoriteVC = favoriteScene.instantiate() as ViewController
-        favoriteVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
-        
-        let tabController = UITabBarController()
-        tabController.setViewControllers([trendVC, favoriteVC], animated: true)
-        
-        window?.rootViewController = tabController
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//        
+//        let trendScene = StoryboardScene.Main.initialScene
+//        let trendVC = trendScene.instantiate() as ViewController
+//        trendVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+//        
+//        let favoriteScene = StoryboardScene.Main.initialScene
+//        let favoriteVC = favoriteScene.instantiate() as ViewController
+//        favoriteVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+//        
+//        let tabController = UITabBarController()
+//        tabController.setViewControllers([trendVC, favoriteVC], animated: true)
+//        
+//        window?.rootViewController = tabController
         return true
     }
 

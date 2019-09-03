@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
 //        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
     }
     
@@ -104,7 +105,7 @@ class TrendDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxT
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 150
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

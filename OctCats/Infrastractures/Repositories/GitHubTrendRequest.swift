@@ -15,10 +15,6 @@ extension GitHubTrendAPITargetType {
     var headers: [String : String]? { return nil }
     var task: Task { return .requestPlain }
     var parameters: [String: Any]? { return nil }
-    var sampleData: Data {
-        let path = Bundle.main.path(forResource: "Stubs/TrendStub", ofType: "json")!
-        return FileHandle(forReadingAtPath: path)!.readDataToEndOfFile()
-    }
 }
 
 enum GitHubTrendRequest {
@@ -32,6 +28,11 @@ enum GitHubTrendRequest {
         init(lang: String) {
             self.lang = "Swift"
             self.since = "today"
+        }
+        
+        var sampleData: Data {
+            let path = Bundle.main.path(forResource: "Stubs/TrendStub", ofType: "json")!
+            return FileHandle(forReadingAtPath: path)!.readDataToEndOfFile()
         }
     }
 }

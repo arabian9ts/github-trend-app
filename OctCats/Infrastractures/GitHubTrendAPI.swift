@@ -20,4 +20,13 @@ class GitHubTrendAPI {
             .filterSuccessfulStatusCodes()
             .map(R.Response.self)
     }
+    
+    func stub() -> [GitHubRepository] {
+        let path = Bundle.main.path(forResource: "Stubs/TrendStub", ofType: "json")!
+        let data = FileHandle(forReadingAtPath: path)!.readDataToEndOfFile()
+        let decoder = JSONDecoder()
+        let repos = try! decoder.decode([
+            GitHubRepository].self, from: data)
+        return repos
+    }
 }

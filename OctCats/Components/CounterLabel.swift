@@ -9,17 +9,20 @@
 import UIKit
 
 class CounterLabel: UILabel {
+    private let duration = 1.0
+    private let startedAt = Date()
     private var timer: Timer?
-    private var value: Int = 0
-    private var from: Int = 0
-    private var to: Int = 0
+    private var value: Double = 0
+    private var from: Double = 0
+    private var to: Double = 0
     
-    func startCount(from: Int, to: Int) {
+    func startCount(from: Double, to: Double) {
+        if let _ = timer { return }
         self.value = from
         self.from = from
         self.to = to
         self.timer = Timer.scheduledTimer(
-            timeInterval: 0.01,
+            timeInterval: 0.05,
             target: self,
             selector: #selector(updateValue),
             userInfo: nil,
@@ -28,15 +31,19 @@ class CounterLabel: UILabel {
     }
     
     @objc private func updateValue() {
-        if self.to <= self.value {
+        if to <= value {
+            text = "\(Int(to))"
             stopAnimation()
             return
         }
-        self.value += 1
-        self.text = "\(self.value)"
+        let now = Date()
+        let elapsed = now.timeIntervalSince(startedAt)
+        let per = elapsed / duration
+        value = (to - from) * per
+        text = "\(Int(value))"
     }
     
     func stopAnimation() {
-        self.timer?.invalidate()
+        timer?.invalidate()
     }
 }
