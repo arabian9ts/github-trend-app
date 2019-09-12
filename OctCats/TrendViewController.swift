@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TrendViewController.swift
 //  OctCats
 //
 //  Created by arabian9ts on 2019/08/28.
@@ -14,8 +14,8 @@ import SnapKit
 
 fileprivate let reuseIdef = "TrendTableViewCell"
 
-class ViewController: UIViewController {
-    
+class TrendViewController: UIViewController {
+
     private var trendTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
@@ -45,8 +45,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
-        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
+        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
+//        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
     }
     
     private func setupBackground() {

@@ -20,7 +20,7 @@
 		FF3570F72319EA16005B1691 /* TrendAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3570F62319EA16005B1691 /* TrendAction.swift */; };
 		FF3570F92319EA68005B1691 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3570F82319EA68005B1691 /* Store.swift */; };
 		FF4BE1FF231664F700FB14B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */; };
-		FF4BE201231664F700FB14B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE200231664F700FB14B8 /* ViewController.swift */; };
+		FF4BE201231664F700FB14B8 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE200231664F700FB14B8 /* TrendViewController.swift */; };
 		FF4BE204231664F700FB14B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE202231664F700FB14B8 /* Main.storyboard */; };
 		FF4BE206231664FE00FB14B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE205231664FE00FB14B8 /* Assets.xcassets */; };
 		FF4BE209231664FE00FB14B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE207231664FE00FB14B8 /* LaunchScreen.storyboard */; };
@@ -49,6 +49,8 @@
 		FF4BE2512316A86500FB14B8 /* CounterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE2502316A86500FB14B8 /* CounterLabel.swift */; };
 		FF55E868231B8A44002BF862 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E867231B8A44002BF862 /* UITableView+.swift */; };
 		FF55E86A231B8ABC002BF862 /* ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E869231B8ABC002BF862 /* ClassName.swift */; };
+		FF9F48BA232A1D7400AA78F8 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */; };
+		FF9F48BC232A1F5F00AA78F8 /* TrendPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,7 +89,7 @@
 		FF3570F82319EA68005B1691 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		FF4BE1FB231664F700FB14B8 /* OctCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF4BE200231664F700FB14B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF4BE200231664F700FB14B8 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
 		FF4BE203231664F700FB14B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF4BE205231664FE00FB14B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF4BE208231664FE00FB14B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,8 @@
 		FF4BE2502316A86500FB14B8 /* CounterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterLabel.swift; sourceTree = "<group>"; };
 		FF55E867231B8A44002BF862 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		FF55E869231B8ABC002BF862 /* ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassName.swift; sourceTree = "<group>"; };
+		FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +229,9 @@
 				FF4BE22023166A8700FB14B8 /* Extensions */,
 				FF4BE21F23166A7300FB14B8 /* Components */,
 				FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */,
-				FF4BE200231664F700FB14B8 /* ViewController.swift */,
+				FF4BE200231664F700FB14B8 /* TrendViewController.swift */,
+				FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */,
+				FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */,
 				FF4BE205231664FE00FB14B8 /* Assets.xcassets */,
 				FF4BE20A231664FE00FB14B8 /* Info.plist */,
 				C7C5F30BCD4A1A83B409EFB9 /* Infrastractures */,
@@ -406,11 +412,13 @@
 				FF3570E223190A8C005B1691 /* TrendTableViewCell.swift in Sources */,
 				FF4BE22B23166E4500FB14B8 /* assets-images.swift in Sources */,
 				FF4BE2512316A86500FB14B8 /* CounterLabel.swift in Sources */,
+				FF9F48BC232A1F5F00AA78F8 /* TrendPageViewController.swift in Sources */,
 				FF4BE22C23166E4500FB14B8 /* storyboards.swift in Sources */,
 				FF4BE24B23167BBE00FB14B8 /* GitHubTrendAPI.swift in Sources */,
 				FF55E86A231B8ABC002BF862 /* ClassName.swift in Sources */,
 				FF55E868231B8A44002BF862 /* UITableView+.swift in Sources */,
-				FF4BE201231664F700FB14B8 /* ViewController.swift in Sources */,
+				FF9F48BA232A1D7400AA78F8 /* TopViewController.swift in Sources */,
+				FF4BE201231664F700FB14B8 /* TrendViewController.swift in Sources */,
 				FF3570EE2319DB6D005B1691 /* Dispatcher.swift in Sources */,
 				FF4BE1FF231664F700FB14B8 /* AppDelegate.swift in Sources */,
 				FF4BE22623166D4900FB14B8 /* UIColor+.swift in Sources */,

@@ -45,14 +45,24 @@ internal struct ColorAsset {
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let fork = ImageAsset(name: "fork")
+  internal static let go = ImageAsset(name: "go")
+  internal static let js = ImageAsset(name: "js")
+  internal static let python = ImageAsset(name: "python")
+  internal static let ruby = ImageAsset(name: "ruby")
   internal static let star = ImageAsset(name: "star")
+  internal static let swift = ImageAsset(name: "swift")
 
   // swiftlint:disable trailing_comma
   internal static let allColors: [ColorAsset] = [
   ]
   internal static let allImages: [ImageAsset] = [
     fork,
+    go,
+    js,
+    python,
+    ruby,
     star,
+    swift,
   ]
   // swiftlint:enable trailing_comma
   @available(*, deprecated, renamed: "allImages")
