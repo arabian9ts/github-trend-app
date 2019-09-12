@@ -41,8 +41,6 @@
 		FF4BE24023167AA300FB14B8 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE23E23167AA300FB14B8 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF4BE24223167ACE00FB14B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24123167ACE00FB14B8 /* Alamofire.framework */; };
 		FF4BE24323167ACE00FB14B8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24123167ACE00FB14B8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FF4BE24523167B1500FB14B8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24423167B1500FB14B8 /* Alamofire.framework */; };
-		FF4BE24623167B1500FB14B8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24423167B1500FB14B8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF4BE24823167B4F00FB14B8 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24723167B4F00FB14B8 /* Result.framework */; };
 		FF4BE24923167B4F00FB14B8 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE24723167B4F00FB14B8 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF4BE24B23167BBE00FB14B8 /* GitHubTrendAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */; };
@@ -67,7 +65,6 @@
 				FF4BE24923167B4F00FB14B8 /* Result.framework in Embed Frameworks */,
 				FF4BE218231666F700FB14B8 /* RealmSwift.framework in Embed Frameworks */,
 				FF4BE24F23167E2100FB14B8 /* RxMoya.framework in Embed Frameworks */,
-				FF4BE24623167B1500FB14B8 /* Alamofire.framework in Embed Frameworks */,
 				FF4BE214231666E200FB14B8 /* Realm.framework in Embed Frameworks */,
 				FF4BE21C2316671900FB14B8 /* RxSwift.framework in Embed Frameworks */,
 				FF3570E623191BAB005B1691 /* SnapKit.framework in Embed Frameworks */,
@@ -127,7 +124,6 @@
 				FF4BE24823167B4F00FB14B8 /* Result.framework in Frameworks */,
 				FF4BE217231666F700FB14B8 /* RealmSwift.framework in Frameworks */,
 				FF4BE24E23167E2100FB14B8 /* RxMoya.framework in Frameworks */,
-				FF4BE24523167B1500FB14B8 /* Alamofire.framework in Frameworks */,
 				FF4BE213231666E200FB14B8 /* Realm.framework in Frameworks */,
 				FF4BE21B2316671900FB14B8 /* RxSwift.framework in Frameworks */,
 				FF3570E523191BAB005B1691 /* SnapKit.framework in Frameworks */,

@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class TrendStore: Store {
-    var trendRepositories = BehaviorRelay<[GitHubRepository]>(value: [GitHubRepository(), GitHubRepository(), GitHubRepository(), GitHubRepository(), GitHubRepository()])
+    var trendRepositories = BehaviorRelay<[GitHubRepository]>(value: [])
     private let disposeBag = DisposeBag()
     
     required init(with dispatcher: Dispatcher = .shared) {
@@ -25,7 +25,7 @@ class TrendStore: Store {
                         print("error: \(err)")
                     })
                     .disposed(by: self.disposeBag)
-            case let .getTrendsStub:
+            case .getTrendsStub:
                 let stub = GitHubTrendAPI.shared.stub()
                 self.trendRepositories.accept(stub)
             }})

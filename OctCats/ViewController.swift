@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 import UIKit
 import SnapKit
-import SkeletonView
 
 fileprivate let reuseIdef = "TrendTableViewCell"
 
@@ -46,8 +45,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
-//        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
+//        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
+        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
     }
     
     private func setupBackground() {
@@ -93,14 +92,20 @@ class TrendDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxT
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if itemModels.count == 0 {
+            return 10
+        }
         return itemModels.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: TrendTableViewCell.self, for: indexPath)
-//        cell.isSkeletonable = true
-//        cell.showGradientSkeleton()
-        cell.setupCell(model: itemModels[indexPath.row])
+        if itemModels.count == 0 {
+            cell.showMask()
+        }
+        else {
+            cell.setupCell(model: itemModels[indexPath.row])
+        }
         return cell
     }
     

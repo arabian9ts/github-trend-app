@@ -9,7 +9,7 @@
 import UIKit
 
 class CounterLabel: UILabel {
-    private let duration = 1.0
+    private let duration = 1.8
     private let startedAt = Date()
     private var timer: Timer?
     private var value: Double = 0

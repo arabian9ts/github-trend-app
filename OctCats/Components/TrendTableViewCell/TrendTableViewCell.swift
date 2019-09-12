@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class TrendTableViewCell: UITableViewCell {
 
@@ -30,10 +31,12 @@ class TrendTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupLayout()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupLayout()
     }
     
     override var frame: CGRect {
@@ -62,8 +65,26 @@ class TrendTableViewCell: UITableViewCell {
 //        containerView.layer.shadowOffset = CGSize(width: 0, height: 10)
     }
     
+    func showMask() {
+        repositoryNameLabel.sizeToFit()
+        descLabel.sizeToFit()
+        repositoryNameLabel.showAnimatedGradientSkeleton()
+        descLabel.showAnimatedGradientSkeleton()
+        langLabel.showAnimatedGradientSkeleton()
+        starLabel.showAnimatedGradientSkeleton()
+        forkLabel.showAnimatedGradientSkeleton()
+    }
+    
+    func hideMask() {
+        repositoryNameLabel.hideSkeleton()
+        descLabel.hideSkeleton()
+        langLabel.hideSkeleton()
+        starLabel.hideSkeleton()
+        forkLabel.hideSkeleton()
+    }
+    
     func setupCell(model: GitHubRepository) {
-        setupLayout()
+        hideMask()
         repositoryNameLabel.text = "\(model.author!) / \(model.name!)"
         langColorView.backgroundColor = UIColor(hex: model.languageColor ?? "", alpha: 1)
         langColorAsideView.backgroundColor = UIColor(hex: model.languageColor ?? "", alpha: 1)
