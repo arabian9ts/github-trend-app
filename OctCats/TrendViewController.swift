@@ -15,26 +15,6 @@ import SnapKit
 fileprivate let reuseIdef = "TrendTableViewCell"
 
 class TrendViewController: UIViewController {
-    struct Input {
-        var lang: String = ""
-        
-        init(lang: String) {
-            self.lang = lang
-        }
-    }
-    
-    private var input: Input = {
-        return Input(lang: "Swift")
-    }()
-    
-    init(input: Input) {
-        super.init(nibName: nil, bundle: nil)
-        self.input = input
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     private var trendTableView: UITableView = {
         let tableView = UITableView()
@@ -65,12 +45,11 @@ class TrendViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
+        trendTableView.reloadData()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: input.lang))
     }
     
     private func setupBackground() {

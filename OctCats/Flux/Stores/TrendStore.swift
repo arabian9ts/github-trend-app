@@ -19,12 +19,13 @@ class TrendStore: Store {
         dispatcher.register(actionHandler: { [unowned self] (action: TrendAction) in
             switch action {
             case let .getTrends(lang):
-                if 0 < (self.repositoryMap[lang]?.count ?? 0) { return }
-                print("fetch \(lang)")
+                if let repositories = self.repositoryMap[lang], 0 < repositories.count {
+                    self.trendRepositories.accept(repositories)
+                }
                 GitHubTrendAPI.shared.request(GitHubTrendRequest.GetTrend(lang: lang))
                     .subscribe(onSuccess: { (trends) in
                         self.trendRepositories.accept(trends)
-                        self.repositoryMap[lang]? = trends
+                        self.repositoryMap[lang] = trends
                     }, onError: { (err) in
                         print("error: \(err)")
                     })
@@ -32,6 +33,8 @@ class TrendStore: Store {
             case .getTrendsStub:
                 let stub = GitHubTrendAPI.shared.stub()
                 self.trendRepositories.accept(stub)
+            case .purgeTrends:
+                self.trendRepositories.accept([])
             }})
             .disposed(by: disposeBag)
     }

@@ -9,14 +9,24 @@
 import UIKit
 
 class TrendPageViewController: UIPageViewController {
-    private let icons: [UIImage] = {
-        return [Asset.go.image, Asset.ruby.image, Asset.swift.image, Asset.python.image, Asset.js.image]
+    private let langList: [String] = {
+        return ["go", "ruby", "swift", "python", "javascript"]
+    }()
+    
+    private let langIcons: [String: UIImage] = {
+        return [
+            "go": Asset.go.image,
+            "ruby": Asset.ruby.image,
+            "swift": Asset.swift.image,
+            "python": Asset.python.image,
+            "javascript": Asset.js.image,
+        ]
     }()
     
     private var arrangedSubviews = [UIImageView]()
     
     private var viewCtrls = [UIViewController]()
-    private var currentIdx = 0
+    private var currentIdx = -1
     
     private var langIconContainerView: UIView = {
         let container = UIView()
@@ -69,7 +79,7 @@ class TrendPageViewController: UIPageViewController {
         let fixedYLocation = CGPoint(x: pressedLocation.x, y: langIconView.frame.height / 2)
         let hitTestView = langIconContainerView.hitTest(fixedYLocation, with: nil)
         if hitTestView is UIImageView {
-            UIView.animate(withDuration: 0.26, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 0.16, delay: 0, options: .curveEaseOut, animations: {
                 self.langIconView.subviews.forEach({ (imageView) in
                     imageView.transform = .identity
                 })
@@ -82,7 +92,7 @@ class TrendPageViewController: UIPageViewController {
     }
     
     private func handleGestureEnded() {
-        UIView.animate(withDuration: 0.26, delay: 0, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.16, delay: 0, options: .curveEaseOut, animations: {
             let stackView = self.langIconView.subviews.first
             stackView?.subviews.forEach({ (imageView) in
                 imageView.transform = .identity
@@ -104,11 +114,12 @@ class TrendPageViewController: UIPageViewController {
         langIconContainerView.snp.makeConstraints { (make) -> Void in
             make.centerX.equalToSuperview()
             make.bottom.equalTo(-iconSize)
-            make.width.equalTo(iconSize * icons.count + (icons.count - 1) * Int(spacing))
+            make.width.equalTo(iconSize * langList.count + (langList.count - 1) * Int(spacing))
             make.height.equalTo(iconSize)
         }
         
-        arrangedSubviews = icons.map({ (image) -> UIImageView in
+        arrangedSubviews = langList.map({ (lang) -> UIImageView in
+            let image = langIcons[lang]
             let imageView = UIImageView(image: image)
             imageView.isUserInteractionEnabled = true
             return imageView
@@ -134,22 +145,18 @@ class TrendPageViewController: UIPageViewController {
     }
     
     private func setupViewCtrls() {
-        let langBox = ["go", "ruby", "swift", "python", "javascript"]
-        langBox.forEach({ (lang) in
-            let input = TrendViewController.Input(lang: lang)
-            let vc = TrendViewController(input: input)
-            viewCtrls.append(vc)
+        langList.forEach({ _ in
+            viewCtrls.append(TrendViewController())
             setViewControllers([viewCtrls.last!], direction: .forward, animated: false, completion: nil)
         })
-        setViewControllers([viewCtrls[0]], direction: .forward, animated: false, completion: nil)
-//        setViewControllers([viewCtrls[3]], direction: .forward, animated: false, completion: nil)
-//        setViewControllers([viewCtrls[2]], direction: .forward, animated: false, completion: nil)
-//        setViewControllers([viewCtrls[1]], direction: .forward, animated: false, completion: nil)
-//        setViewControllers([viewCtrls[0]], direction: .forward, animated: false, completion: nil)
+        move(to: 0)
     }
     
     private func move(to: Int) {
         if currentIdx != to {
+            let lang = langList[to]
+            Dispatcher.shared.dispatch(TrendAction.purgeTrends)
+            Dispatcher.shared.dispatch(TrendAction.getTrends(lang: lang))
             if let generator = self.feedbackGenerator {
                 generator.impactOccurred()
             }
