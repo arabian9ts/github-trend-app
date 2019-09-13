@@ -15,7 +15,27 @@ import SnapKit
 fileprivate let reuseIdef = "TrendTableViewCell"
 
 class TrendViewController: UIViewController {
-
+    struct Input {
+        var lang: String = ""
+        
+        init(lang: String) {
+            self.lang = lang
+        }
+    }
+    
+    private var input: Input = {
+        return Input(lang: "Swift")
+    }()
+    
+    init(input: Input) {
+        super.init(nibName: nil, bundle: nil)
+        self.input = input
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private var trendTableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
@@ -33,7 +53,7 @@ class TrendViewController: UIViewController {
     }()
     
     private let store: TrendStore = {
-        return TrendStore()
+        return TrendStore.shared
     }()
 
     override func viewDidLoad() {
@@ -45,8 +65,12 @@ class TrendViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
-//        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: "Swift"))
+//        Dispatcher.shared.dispatch(TrendAction.getTrendsStub)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        Dispatcher.shared.dispatch(TrendAction.getTrends(lang: input.lang))
     }
     
     private func setupBackground() {
@@ -71,7 +95,7 @@ class TrendViewController: UIViewController {
             make.right.equalTo(view)
         }
         
-        store.trendRepositories.bind(to: trendTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        store.trendRepositories.asObservable().bind(to: trendTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
     }
 }
 

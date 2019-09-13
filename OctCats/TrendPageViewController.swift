@@ -28,6 +28,16 @@ class TrendPageViewController: UIPageViewController {
         return stackView
     }()
 
+    private let feedbackGenerator: UIImpactFeedbackGenerator? = {
+        if #available(iOS 10.0, *) {
+            let generator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+            generator.prepare()
+            return generator
+        } else {
+            return nil
+        }
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -124,19 +134,27 @@ class TrendPageViewController: UIPageViewController {
     }
     
     private func setupViewCtrls() {
-        viewCtrls.append(TrendViewController())
-        viewCtrls.append(TrendViewController())
-        viewCtrls.append(TrendViewController())
-        viewCtrls.append(TrendViewController())
-        viewCtrls.append(TrendViewController())
-        setViewControllers([viewCtrls[4]], direction: .forward, animated: false, completion: nil)
-        setViewControllers([viewCtrls[3]], direction: .forward, animated: false, completion: nil)
-        setViewControllers([viewCtrls[2]], direction: .forward, animated: false, completion: nil)
-        setViewControllers([viewCtrls[1]], direction: .forward, animated: false, completion: nil)
+        let langBox = ["go", "ruby", "swift", "python", "javascript"]
+        langBox.forEach({ (lang) in
+            let input = TrendViewController.Input(lang: lang)
+            let vc = TrendViewController(input: input)
+            viewCtrls.append(vc)
+            setViewControllers([viewCtrls.last!], direction: .forward, animated: false, completion: nil)
+        })
         setViewControllers([viewCtrls[0]], direction: .forward, animated: false, completion: nil)
+//        setViewControllers([viewCtrls[3]], direction: .forward, animated: false, completion: nil)
+//        setViewControllers([viewCtrls[2]], direction: .forward, animated: false, completion: nil)
+//        setViewControllers([viewCtrls[1]], direction: .forward, animated: false, completion: nil)
+//        setViewControllers([viewCtrls[0]], direction: .forward, animated: false, completion: nil)
     }
     
     private func move(to: Int) {
-        setViewControllers([viewCtrls[to]], direction: .forward, animated: false, completion: nil)
+        if currentIdx != to {
+            if let generator = self.feedbackGenerator {
+                generator.impactOccurred()
+            }
+            currentIdx = to
+            setViewControllers([viewCtrls[to]], direction: .forward, animated: false, completion: nil)
+        }
     }
 }

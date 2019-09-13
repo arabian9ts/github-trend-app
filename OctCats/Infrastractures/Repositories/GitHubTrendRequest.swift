@@ -12,21 +12,23 @@ protocol GitHubTrendAPITargetType: TargetType {
 extension GitHubTrendAPITargetType {
     typealias Response = [GitHubRepository]
     var baseURL: URL { return URL(string: "https://github-trending-api.now.sh")! }
-    var headers: [String : String]? { return nil }
+    var headers: [String: String]? { return nil }
     var task: Task { return .requestPlain }
-    var parameters: [String: Any]? { return nil }
 }
 
 enum GitHubTrendRequest {
     struct GetTrend: GitHubTrendAPITargetType {
         var method: Method { return .get }
         var path: String { return "/" }
-        var parameters: [String : Any]? { return ["since" : since, "lang" : lang ] }
+        var parameters: [String: Any] { return ["since": since, "language": lang] }
+        var task: Task {
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        }
         var lang: String
         var since: String
 
         init(lang: String) {
-            self.lang = "Swift"
+            self.lang = lang
             self.since = "today"
         }
         

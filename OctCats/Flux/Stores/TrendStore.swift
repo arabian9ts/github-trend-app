@@ -10,17 +10,24 @@ import RxSwift
 import RxCocoa
 
 class TrendStore: Store {
-    var trendRepositories = BehaviorRelay<[GitHubRepository]>(value: [])
+    static let shared = TrendStore()
+    var trendRepositories = PublishRelay<[GitHubRepository]>()
+    private var repositoryMap = [String: [GitHubRepository]]()
     private let disposeBag = DisposeBag()
-    
-    required init(with dispatcher: Dispatcher = .shared) {
+
+    internal required init(with dispatcher: Dispatcher = .shared) {
         dispatcher.register(actionHandler: { [unowned self] (action: TrendAction) in
             switch action {
             case let .getTrends(lang):
+                if 0 < (self.repositoryMap[lang]?.count ?? 0) { return }
+                print("fetch \(lang)")
                 GitHubTrendAPI.shared.request(GitHubTrendRequest.GetTrend(lang: lang))
                     .subscribe(onSuccess: { (trends) in
-                        dump(trends)
+                        if lang == "go" {
+                            dump(trends)
+                        }
                         self.trendRepositories.accept(trends)
+                        self.repositoryMap[lang]? = trends
                     }, onError: { (err) in
                         print("error: \(err)")
                     })
