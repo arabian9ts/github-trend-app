@@ -23,9 +23,6 @@ class TrendStore: Store {
                 print("fetch \(lang)")
                 GitHubTrendAPI.shared.request(GitHubTrendRequest.GetTrend(lang: lang))
                     .subscribe(onSuccess: { (trends) in
-                        if lang == "go" {
-                            dump(trends)
-                        }
                         self.trendRepositories.accept(trends)
                         self.repositoryMap[lang]? = trends
                     }, onError: { (err) in
