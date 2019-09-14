@@ -12,6 +12,8 @@ To Switch language, press the bottom and keep 0.5 sec.
 Then, lang icons appears and you can select one.
 When Trend Repository Cell is selected, you can browse repository in web-view.
 
+![SwitchLang.gif](github/SwitchLang.gif)
+
 ## Using Libs
 - [SwiftGen](https://github.com/SwiftGen/SwiftGen)
 - [Moya](https://github.com/Moya/Moya)
