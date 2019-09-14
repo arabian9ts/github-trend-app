@@ -75,12 +75,23 @@ class TrendViewController: UIViewController {
         }
         
         store.trendRepositories.asObservable().bind(to: trendTableView.rx.items(dataSource: dataSource)).disposed(by: disposeBag)
+        dataSource.selectedCellSubject
+            .map{ "\($0.author!)/\($0.name!)" }
+            .subscribe(onNext: { repositoryTitle in
+                let repositoryURL = "https://github.com/\(repositoryTitle)"
+                let vc = WebViewController()
+                let _ = vc.loadWebView(input: WebViewController.Input(urlString: repositoryURL, title: repositoryTitle))
+                let navigationVC = GitHubRepositoryViewController(rootViewController: vc)
+                self.present(navigationVC, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
 class TrendDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxTableViewDataSourceType {
     typealias Element = [GitHubRepository]
     private var itemModels: [GitHubRepository] = []
+    fileprivate let selectedCellSubject = PublishSubject<GitHubRepository>()
     
     public func tableView(_ tableView: UITableView, observedEvent: Event<[GitHubRepository]>) {
         Binder(self) { dataSource, element in
@@ -117,5 +128,7 @@ class TrendDataSource: NSObject, UITableViewDelegate, UITableViewDataSource, RxT
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repository = itemModels[indexPath.row]
+        selectedCellSubject.onNext(repository)
     }
 }

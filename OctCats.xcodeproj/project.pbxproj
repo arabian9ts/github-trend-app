@@ -51,6 +51,8 @@
 		FF55E86A231B8ABC002BF862 /* ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55E869231B8ABC002BF862 /* ClassName.swift */; };
 		FF9F48BA232A1D7400AA78F8 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */; };
 		FF9F48BC232A1F5F00AA78F8 /* TrendPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */; };
+		FF9F48BE232CD1A500AA78F8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F48BD232CD1A500AA78F8 /* WebViewController.swift */; };
+		FF9F48C2232CE92A00AA78F8 /* GitHubRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F48C1232CE92A00AA78F8 /* GitHubRepositoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +116,8 @@
 		FF55E869231B8ABC002BF862 /* ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassName.swift; sourceTree = "<group>"; };
 		FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendPageViewController.swift; sourceTree = "<group>"; };
+		FF9F48BD232CD1A500AA78F8 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		FF9F48C1232CE92A00AA78F8 /* GitHubRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepositoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,8 @@
 				FF4BE200231664F700FB14B8 /* TrendViewController.swift */,
 				FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */,
 				FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */,
+				FF9F48BD232CD1A500AA78F8 /* WebViewController.swift */,
+				FF9F48C1232CE92A00AA78F8 /* GitHubRepositoryViewController.swift */,
 				FF4BE205231664FE00FB14B8 /* Assets.xcassets */,
 				FF4BE20A231664FE00FB14B8 /* Info.plist */,
 				C7C5F30BCD4A1A83B409EFB9 /* Infrastractures */,
@@ -408,6 +414,7 @@
 				FF3570F92319EA68005B1691 /* Store.swift in Sources */,
 				FF4BE2352316788500FB14B8 /* GitHubRepository.swift in Sources */,
 				FF3570F52319E9F6005B1691 /* TrendStore.swift in Sources */,
+				FF9F48BE232CD1A500AA78F8 /* WebViewController.swift in Sources */,
 				FF3570F32319E49D005B1691 /* Action.swift in Sources */,
 				FF3570E223190A8C005B1691 /* TrendTableViewCell.swift in Sources */,
 				FF4BE22B23166E4500FB14B8 /* assets-images.swift in Sources */,
@@ -419,6 +426,7 @@
 				FF55E868231B8A44002BF862 /* UITableView+.swift in Sources */,
 				FF9F48BA232A1D7400AA78F8 /* TopViewController.swift in Sources */,
 				FF4BE201231664F700FB14B8 /* TrendViewController.swift in Sources */,
+				FF9F48C2232CE92A00AA78F8 /* GitHubRepositoryViewController.swift in Sources */,
 				FF3570EE2319DB6D005B1691 /* Dispatcher.swift in Sources */,
 				FF4BE1FF231664F700FB14B8 /* AppDelegate.swift in Sources */,
 				FF4BE22623166D4900FB14B8 /* UIColor+.swift in Sources */,
