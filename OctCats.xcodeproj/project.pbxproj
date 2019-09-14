@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2954983E4BFF45E36CED933E /* Pods_OctCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0E66EA3C29C424FC73C2FC /* Pods_OctCats.framework */; };
 		C7C5FF7F314CEBF69F276B62 /* GitHubTrendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5F89719C5ABEEC7381170 /* GitHubTrendRequest.swift */; };
 		FF3570E223190A8C005B1691 /* TrendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3570E023190A8C005B1691 /* TrendTableViewCell.swift */; };
 		FF3570E323190A8C005B1691 /* TrendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3570E123190A8C005B1691 /* TrendTableViewCell.xib */; };
@@ -73,7 +74,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A0E66EA3C29C424FC73C2FC /* Pods_OctCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2FA4D30450DABFC7D9B515 /* Pods-OctCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctCats.release.xcconfig"; path = "Target Support Files/Pods-OctCats/Pods-OctCats.release.xcconfig"; sourceTree = "<group>"; };
 		C7C5F89719C5ABEEC7381170 /* GitHubTrendRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTrendRequest.swift; sourceTree = "<group>"; };
+		DDA050220E4BBEE73347E256 /* Pods-OctCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctCats.debug.xcconfig"; path = "Target Support Files/Pods-OctCats/Pods-OctCats.debug.xcconfig"; sourceTree = "<group>"; };
 		FF3570E023190A8C005B1691 /* TrendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendTableViewCell.swift; sourceTree = "<group>"; };
 		FF3570E123190A8C005B1691 /* TrendTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendTableViewCell.xib; sourceTree = "<group>"; };
 		FF3570E423191BAA005B1691 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
@@ -125,12 +129,21 @@
 				FF4BE24E23167E2100FB14B8 /* RxMoya.framework in Frameworks */,
 				FF4BE21B2316671900FB14B8 /* RxSwift.framework in Frameworks */,
 				FF3570E523191BAB005B1691 /* SnapKit.framework in Frameworks */,
+				2954983E4BFF45E36CED933E /* Pods_OctCats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7599B1E3569F3C6EA8EAC9CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A0E66EA3C29C424FC73C2FC /* Pods_OctCats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C7C5F272F902B62D31E5DA74 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,15 @@
 				FF4BE24A23167BBE00FB14B8 /* GitHubTrendAPI.swift */,
 			);
 			path = Infrastractures;
+			sourceTree = "<group>";
+		};
+		E0B398A12A438BAFBD48F3A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDA050220E4BBEE73347E256 /* Pods-OctCats.debug.xcconfig */,
+				7D2FA4D30450DABFC7D9B515 /* Pods-OctCats.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		FF3570DF23190A45005B1691 /* TrendTableViewCell */ = {
@@ -199,6 +221,8 @@
 				FF4BE2192316671800FB14B8 /* RxSwift.framework */,
 				FF4BE1FD231664F700FB14B8 /* OctCats */,
 				FF4BE1FC231664F700FB14B8 /* Products */,
+				E0B398A12A438BAFBD48F3A4 /* Pods */,
+				7599B1E3569F3C6EA8EAC9CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +317,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF4BE20D231664FE00FB14B8 /* Build configuration list for PBXNativeTarget "OctCats" */;
 			buildPhases = (
+				972E8D02204EC48FF6592082 /* [CP] Check Pods Manifest.lock */,
 				FF4BE211231665FC00FB14B8 /* swiftgen */,
 				FF4BE1F7231664F700FB14B8 /* Sources */,
 				FF4BE1F8231664F700FB14B8 /* Frameworks */,
@@ -358,6 +383,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		972E8D02204EC48FF6592082 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OctCats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FF4BE210231665D900FB14B8 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,7 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "swiftgen/bin/swiftgen\n";
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -571,6 +618,7 @@
 		};
 		FF4BE20E231664FE00FB14B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDA050220E4BBEE73347E256 /* Pods-OctCats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -593,6 +641,7 @@
 		};
 		FF4BE20F231664FE00FB14B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D2FA4D30450DABFC7D9B515 /* Pods-OctCats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

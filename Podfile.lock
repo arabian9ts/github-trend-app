@@ -1,0 +1,16 @@
+PODS:
+  - SwiftGen (5.3.0)
+
+DEPENDENCIES:
+  - SwiftGen (~> 5.3)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
+
+PODFILE CHECKSUM: a689bdf62ef93babb2c8e3991a240e6a67f0b940
+
+COCOAPODS: 1.7.5
