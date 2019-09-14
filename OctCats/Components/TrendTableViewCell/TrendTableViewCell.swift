@@ -53,16 +53,8 @@ class TrendTableViewCell: UITableViewCell {
     
     private func setupLayout() {
         backgroundColor = .white
-        selectionStyle = .none
         layer.masksToBounds = true
         layer.cornerRadius = 10.0
-
-//        containerView.layer.masksToBounds = false
-//        containerView.backgroundColor = .clear
-//        containerView.layer.shadowOpacity = 0.15
-//        containerView.layer.shadowRadius = 10.0
-//        containerView.layer.shadowColor = UIColor.black.cgColor
-//        containerView.layer.shadowOffset = CGSize(width: 0, height: 10)
     }
     
     func showMask() {

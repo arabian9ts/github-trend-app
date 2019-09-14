@@ -45,7 +45,9 @@ class TrendViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        trendTableView.reloadData()
+        trendTableView.indexPathsForSelectedRows?.forEach {
+            trendTableView.deselectRow(at: $0, animated: true)
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
