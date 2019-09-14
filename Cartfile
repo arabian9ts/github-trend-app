@@ -1,5 +1,4 @@
 github "SnapKit/SnapKit"
 github "ReactiveX/RxSwift"
 github "Moya/Moya"
-github "realm/realm-cocoa"
 github "Juanpe/SkeletonView" "master"

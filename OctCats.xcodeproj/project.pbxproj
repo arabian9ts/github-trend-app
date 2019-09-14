@@ -24,10 +24,6 @@
 		FF4BE204231664F700FB14B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE202231664F700FB14B8 /* Main.storyboard */; };
 		FF4BE206231664FE00FB14B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE205231664FE00FB14B8 /* Assets.xcassets */; };
 		FF4BE209231664FE00FB14B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BE207231664FE00FB14B8 /* LaunchScreen.storyboard */; };
-		FF4BE213231666E200FB14B8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE212231666E200FB14B8 /* Realm.framework */; };
-		FF4BE214231666E200FB14B8 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE212231666E200FB14B8 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FF4BE217231666F700FB14B8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE216231666F700FB14B8 /* RealmSwift.framework */; };
-		FF4BE218231666F700FB14B8 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE216231666F700FB14B8 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF4BE21B2316671900FB14B8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE2192316671800FB14B8 /* RxSwift.framework */; };
 		FF4BE21C2316671900FB14B8 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE2192316671800FB14B8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF4BE21D2316671900FB14B8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BE21A2316671900FB14B8 /* RxCocoa.framework */; };
@@ -67,9 +63,7 @@
 				FF3570E92319B1B6005B1691 /* SkeletonView.framework in Embed Frameworks */,
 				FF4BE24023167AA300FB14B8 /* Moya.framework in Embed Frameworks */,
 				FF4BE24923167B4F00FB14B8 /* Result.framework in Embed Frameworks */,
-				FF4BE218231666F700FB14B8 /* RealmSwift.framework in Embed Frameworks */,
 				FF4BE24F23167E2100FB14B8 /* RxMoya.framework in Embed Frameworks */,
-				FF4BE214231666E200FB14B8 /* Realm.framework in Embed Frameworks */,
 				FF4BE21C2316671900FB14B8 /* RxSwift.framework in Embed Frameworks */,
 				FF3570E623191BAB005B1691 /* SnapKit.framework in Embed Frameworks */,
 			);
@@ -96,8 +90,6 @@
 		FF4BE205231664FE00FB14B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF4BE208231664FE00FB14B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF4BE20A231664FE00FB14B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF4BE212231666E200FB14B8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		FF4BE216231666F700FB14B8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FF4BE2192316671800FB14B8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		FF4BE21A2316671900FB14B8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FF4BE22523166D4900FB14B8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
@@ -130,9 +122,7 @@
 				FF3570E82319B1B6005B1691 /* SkeletonView.framework in Frameworks */,
 				FF4BE23F23167AA300FB14B8 /* Moya.framework in Frameworks */,
 				FF4BE24823167B4F00FB14B8 /* Result.framework in Frameworks */,
-				FF4BE217231666F700FB14B8 /* RealmSwift.framework in Frameworks */,
 				FF4BE24E23167E2100FB14B8 /* RxMoya.framework in Frameworks */,
-				FF4BE213231666E200FB14B8 /* Realm.framework in Frameworks */,
 				FF4BE21B2316671900FB14B8 /* RxSwift.framework in Frameworks */,
 				FF3570E523191BAB005B1691 /* SnapKit.framework in Frameworks */,
 			);
@@ -207,8 +197,6 @@
 				FF4BE23E23167AA300FB14B8 /* Moya.framework */,
 				FF4BE21A2316671900FB14B8 /* RxCocoa.framework */,
 				FF4BE2192316671800FB14B8 /* RxSwift.framework */,
-				FF4BE216231666F700FB14B8 /* RealmSwift.framework */,
-				FF4BE212231666E200FB14B8 /* Realm.framework */,
 				FF4BE1FD231664F700FB14B8 /* OctCats */,
 				FF4BE1FC231664F700FB14B8 /* Products */,
 			);
@@ -225,6 +213,7 @@
 		FF4BE1FD231664F700FB14B8 /* OctCats */ = {
 			isa = PBXGroup;
 			children = (
+				FF9F48C3232CF45F00AA78F8 /* ViewControllers */,
 				FF3570EA2319DB15005B1691 /* Flux */,
 				FF4BE23C23167A0900FB14B8 /* Stubs */,
 				FF4BE2332316787900FB14B8 /* Models */,
@@ -233,11 +222,6 @@
 				FF4BE22023166A8700FB14B8 /* Extensions */,
 				FF4BE21F23166A7300FB14B8 /* Components */,
 				FF4BE1FE231664F700FB14B8 /* AppDelegate.swift */,
-				FF4BE200231664F700FB14B8 /* TrendViewController.swift */,
-				FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */,
-				FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */,
-				FF9F48BD232CD1A500AA78F8 /* WebViewController.swift */,
-				FF9F48C1232CE92A00AA78F8 /* GitHubRepositoryViewController.swift */,
 				FF4BE205231664FE00FB14B8 /* Assets.xcassets */,
 				FF4BE20A231664FE00FB14B8 /* Info.plist */,
 				C7C5F30BCD4A1A83B409EFB9 /* Infrastractures */,
@@ -288,6 +272,18 @@
 				FF4BE2342316788500FB14B8 /* GitHubRepository.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FF9F48C3232CF45F00AA78F8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF4BE200231664F700FB14B8 /* TrendViewController.swift */,
+				FF9F48B9232A1D7400AA78F8 /* TopViewController.swift */,
+				FF9F48BB232A1F5F00AA78F8 /* TrendPageViewController.swift */,
+				FF9F48BD232CD1A500AA78F8 /* WebViewController.swift */,
+				FF9F48C1232CE92A00AA78F8 /* GitHubRepositoryViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
